@@ -28,7 +28,7 @@ const createSendToken = (user, statusCode, res) => {
     });    
 }
 
-exports.signup =  async (req, res, next) => {
+exports.signup = async (req, res, next) => {
 
     try {
             const newUser = await User.create({
@@ -39,7 +39,7 @@ exports.signup =  async (req, res, next) => {
             });
     
         createSendToken(newUser, 201, res);
-        
+    
     } catch (err) {
 
         return next(new HttpError('Signing up user failed', 500));  
