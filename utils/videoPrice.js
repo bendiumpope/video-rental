@@ -5,11 +5,14 @@ let videoRate = {
 
 }
 
+/* @desc    This function returns the price associated to a given video type*/
 exports.calVideoPrice = (videoType) => {
 
     return videoRate[videoType];
 }
 
+/* @desc    This function calculates the price of renting a given video type 
+for a given day number of days*/
 exports.videoRentalPrice = (videoType, numDays, options) => {
     
     if (videoType === 'regular') {

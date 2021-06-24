@@ -1,7 +1,9 @@
 const User = require('../models/userModel')
 const HttpError = require('../models/httpError')
 
-
+// @desc    For Get All Users.
+// @route   GET /api/v1/users
+// @access  Public
 exports.getAllUsers = async (req, res, next) => {
 
     try {
@@ -23,7 +25,10 @@ exports.getAllUsers = async (req, res, next) => {
     }
 
 };
-  
+
+// @desc    For Update User. This allow a patch request to update a user's detail.
+// @route   PATCH /api/v1/users/:id
+// @access  Private
 exports.updateUser = async (req, res, next) => {
 
     try {
@@ -48,7 +53,10 @@ exports.updateUser = async (req, res, next) => {
     }
     
 };
-  
+
+// @desc    For Get User. This  gets a registered user by id.
+// @route   GET /api/v1/users/:id
+// @access  Private
 exports.getUser = async (req, res, next) => {
     
     try {
@@ -69,7 +77,10 @@ exports.getUser = async (req, res, next) => {
     }
  
 };
-  
+
+// @desc    For Delete a User. This deletes a registered.
+// @route   DELETE /api/v1/users/:id
+// @access  Private
 exports.deleteUser = async (req, res, next) => {
     
     try {

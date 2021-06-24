@@ -3,7 +3,9 @@ const Price = require('../models/priceModel');
 const HttpError = require('../models/httpError');
 const { videoRentalPrice } = require('../utils/videoPrice')
 
-
+// @desc    For create price. This calculates the cost of renting a movie for a given number of days.
+// @route   POST /api/v1/videos/price
+// @access  Private
 exports.createPrice = async (req, res, next) => {
 
     let { title, numDays } = req.body;

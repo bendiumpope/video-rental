@@ -1,6 +1,9 @@
 const jwt = require('jsonwebtoken');
 const HttpError = require('../models/httpError');
 
+/* @desc    This function protects endpoints when registered as a middleware to 
+ensure a user is authenticated and authorized to access that endpoint */
+
 module.exports = (req, res, next) => {
 
     if(req.method === 'OPTIONS'){

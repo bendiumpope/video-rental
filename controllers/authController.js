@@ -29,6 +29,9 @@ const createSendToken = (user, statusCode, res) => {
     });    
 }
 
+// @desc    For User signup. This allow new users to create an account.
+// @route   POST /api/v1/users/signup
+// @access  Public
 exports.signup = async (req, res, next) => {
 
     try {
@@ -48,6 +51,9 @@ exports.signup = async (req, res, next) => {
     
 };
 
+// @desc    For User login. This allow new users to login and get authenticated in to the app.
+// @route   POST /api/v1/users/login
+// @access  Public
 exports.login = async(req, res, next) => {
     const {email, password} = req.body;
 

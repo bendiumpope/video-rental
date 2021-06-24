@@ -4,6 +4,9 @@ const APIFeatures = require('../utils/apiFeatures')
 const { calVideoPrice } = require('../utils/videoPrice')
 
 
+// @desc    For Create Video.
+// @route   POST /api/v1/videos
+// @access  Private
 exports.createVideo = async (req, res, next) => {
 
     
@@ -39,6 +42,10 @@ exports.createVideo = async (req, res, next) => {
     
 };
 
+/* @desc    For Get All Videos. This route returns all created videos paginated with 5 videos per page.
+   the route can also take queries as to sort the response by given fileds*/
+// @route   GET /api/v1/videos/videolist
+// @access  Public
 exports.getAllVideos = async (req, res, next) => {
 
         ///QUERY EXECUTION
@@ -66,6 +73,10 @@ exports.getAllVideos = async (req, res, next) => {
       
 };
 
+/* @desc    For Get A Video. This route returns cost of a video whose id was
+   passed as a parameter to the route. */
+// @route   GET /api/v1/videos/:id
+// @access  Private
 exports.getVideo = async (req, res, next) => {
 
     let singleVideo
@@ -90,7 +101,11 @@ exports.getVideo = async (req, res, next) => {
     });
 
 };
-  
+
+/* @desc    For Update Video. This route allow a user update a video whose id was
+   passed as a parameter to the route. */
+// @route   PATCH /api/v1/videos/:id
+// @access  Private
 exports.updateVideo = async (req, res, next) => {
 
     let video;
@@ -113,6 +128,10 @@ exports.updateVideo = async (req, res, next) => {
     });
 };
 
+/* @desc    For Delete Video. This route allow a user delete a video whose id was
+   passed as a parameter to the route. */
+// @route   DELETE /api/v1/videos/:id
+// @access  Private
 exports.deleteVideo = async (req, res, next) => {
 
     try {
