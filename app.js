@@ -7,6 +7,8 @@ require('dotenv').config()
 const mongoose = require('mongoose');
 
 const userRouters = require('./routes/usersRoutes');
+const videoRouters = require('./routes/videoRoutes');
+const priceRouters = require('./routes/priceRoutes');
 const HttpError = require('./models/httpError');
 
 const app = express();
@@ -15,8 +17,6 @@ const app = express();
 
 //set Security http headers
 app.use(helmet());
-
-
 
 //set maximum amount of limit request from an ip address in an hour
 const limiter = rateLimit({
@@ -55,8 +55,8 @@ app.use((req, res, next) => {
 
 ////API ROUTES///
 app.use('/api/v1/users', userRouters);
-// app.use('/api/v1/tours', tourRouter);
-// app.use('/api/v1/reviews', reviewRouter);
+app.use('/api/v1/videos', videoRouters);
+app.use('/api/v1/videos/price', priceRouters);
 
 ////HANDLING ERROR ROUTES//////
 app.use((req, res, next) => {
@@ -75,7 +75,6 @@ app.use((error, req, res, next) => {
         message: error.message || 'An unknown error occured'
     });
 });
-// PfGxdvOR9Jw4qzAu
 
 const DB_STRING = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.ekqdr.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 

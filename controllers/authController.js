@@ -3,9 +3,10 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/userModel');
 const HttpError = require('../models/httpError');
 
-const signToken = id => {
+const signToken = (id, name) => {
+
     return jwt.sign(
-        { id: id }, 
+        { id: id, name:name }, 
         process.env.JWT_SECRET, 
         {
             expiresIn: process.env.JWT_EXPIRES_IN
@@ -14,7 +15,7 @@ const signToken = id => {
 };
 
 const createSendToken = (user, statusCode, res) => {
-    const token = signToken(user._id);
+    const token = signToken(user._id, user.name);
     
     //remove the password from the output
     user.password = undefined;
@@ -60,6 +61,7 @@ exports.login = async(req, res, next) => {
     try {
         
         user = await User.findOne({ email }).select('+password');
+
 
     } catch (err) {
 

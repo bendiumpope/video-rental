@@ -5,7 +5,7 @@ const HttpError = require('../models/httpError')
 exports.getAllUsers = async (req, res, next) => {
 
     try {
-        const users = await User.find({}, '-password');;
+        const users = await User.find({}, '-password');
 
   
         res.status(200).json({
