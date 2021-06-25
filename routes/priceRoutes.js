@@ -6,6 +6,7 @@ const router = express.Router();
 
 ///PROTECTED ROUTES
 router.use(checkAuth);
-router.post('/', createPrice);
+router.post('/', createPrice)
+
 
 module.exports = router;

@@ -22,7 +22,7 @@ exports.createPrice = async (req, res, next) => {
         return next(new HttpError('Something went wrong, please try again.', 500))
     }
 
-    if(!video){
+    if (!video) {
 
         return next(new HttpError('No video found with that title', 401));
     }
@@ -50,13 +50,13 @@ exports.createPrice = async (req, res, next) => {
         res.status(201).json({
             status: 'success',
             data: {
-              data: rentalPrice
+                data: rentalPrice
             }
         });
         
     } catch (err) {
 
-        return next(new HttpError('Something went wrong, please try again.', 500))
+        return next(new HttpError('Something went wrong, please try again', 500))
     }
     
 };

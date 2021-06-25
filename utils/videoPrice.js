@@ -12,7 +12,7 @@ exports.calVideoPrice = (videoType) => {
 }
 
 /* @desc    This function calculates the price of renting a given video type 
-for a given day number of days*/
+for a given number of days*/
 exports.videoRentalPrice = (videoType, numDays, options) => {
     
     if (videoType === 'regular') {

@@ -13,7 +13,7 @@ const videoSchema = new mongoose.Schema({
     videoGenre: {
         type: String,
         enum: ['action', 'drama', 'romance', 'comedy', 'horror'],
-        default: 'regular'
+        default: 'comedy'
     },        
     maximumAge: Number,
     yearReleased: String,
