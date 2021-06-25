@@ -37,15 +37,16 @@ It contains the following endpoints/routes
 
 • payload: name, email, password, confirmPassword
 
-e.g {
+•e.g {
 	"name" : "ama benedict",
 	"email" : "ben@gmail.com",
 	"password" : "ben123456",
 	"confirmPassword" : "ben123456"
 }
 
-> A successful signup will result in a HTTP 201 Status Code and a response object 
-{
+• A successful signup will result in a HTTP 201 Status Code and a response object 
+
+•{
   "status": "success",
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZDYwMDk2M2NkODRlMDM3OWM0Yjg1MyIsIm5hbWUiOiJhbWEgYmVuZWRpY3QiLCJpYXQiOjE2MjQ2Mzc1OTUsImV4cCI6MTYyNTUwMTU5NX0.pp0F3lIQKcjJeWaq6JQ-xtcQQ3Sj5YFbMUhjGptdbRA",
   "data": {
@@ -72,7 +73,8 @@ e.g {
 	"password" : "ben123456"
 }
 
-> A successful login will result in a HTTP 200 Status Code and a response object 
+• A successful login will result in a HTTP 200 Status Code and a response object 
+
 {
   "status": "success",
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZDQ4ZDUxNThjYWUzMDZhNTdiYTI1YiIsIm5hbWUiOiJhbWEgbWVyaWFuIiwiaWF0IjoxNjI0NjM3Njg4LCJleHAiOjE2MjU1MDE2ODh9.t5pthgntWHy_cE-7fGwN7QSuj5jNGudynLyIpnQ-LPg",
@@ -93,7 +95,8 @@ e.g {
 
 • Request type: GET
 
-> A successful API request will return a HTTP 200 Status Code and a response object of 
+• A successful API request will return a HTTP 200 Status Code and a response object of 
+
 {
   "status": "success",
   "requestedAt": "2021-06-25T16:16:29.715Z",
@@ -124,7 +127,8 @@ e.g {
 
 • Request type: GET
 
-> A successful API request will return a HTTP 200 Status Code and a response object of 
+• A successful API request will return a HTTP 200 Status Code and a response object of 
+
 {
   "status": "success",
   "data": {
@@ -145,11 +149,13 @@ e.g {
 • Request type: PATCH
 
 • payload: name, email (any of this or both)
+
 e.g {
     "name" : "AMA MERIAN CHIBUZOR"
 }
 
-> A successful update will result in a HTTP 200 Status Code and a response object 
+• A successful update will result in a HTTP 200 Status Code and a response object 
+
 {
   "status": "success",
   "data": {
@@ -190,7 +196,8 @@ e.g {
 
 • Request type: POST
 
-> A successful API request will return a HTTP 200 Status Code and a response object of 
+• A successful API request will return a HTTP 200 Status Code and a response object of 
+
 {
   "status": "success",
   "data": {
@@ -212,7 +219,8 @@ e.g {
 
 • Request type: GET
 
-> A successful API request will return a HTTP 200 Status Code and a response object of 
+• A successful API request will return a HTTP 200 Status Code and a response object of 
+
 {
   "status": "success",
   "requestedAt": "2021-06-25T16:23:57.851Z",
@@ -264,7 +272,8 @@ e.g {
 
 • Request type: GET
 
-> A successful API request will return a HTTP 200 Status Code and a response object of 
+• A successful API request will return a HTTP 200 Status Code and a response object of 
+
 {
   "status": "success",
   "data": {
@@ -285,7 +294,8 @@ e.g {
     "videoType": "regular"
 }
 
-> A successful API request will return a HTTP 200 Status Code and a response object of 
+• A successful API request will return a HTTP 200 Status Code and a response object of 
+
 {
   "status": "success",
   "data": {
@@ -325,7 +335,8 @@ e.g {
 
 • Request type: POST
 
-> A successful API request will return a HTTP 200 Status Code and no response object
+• A successful API request will return a HTTP 200 Status Code and no response object
+
 {
   "status": "success",
   "data": {
