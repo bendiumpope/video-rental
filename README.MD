@@ -37,6 +37,7 @@ It contains the following endpoints/routes
 
 • payload: name, email, password, confirmPassword
 
+```
 •e.g {
 	"name" : "ama benedict",
 	"email" : "ben@gmail.com",
@@ -44,8 +45,9 @@ It contains the following endpoints/routes
 	"confirmPassword" : "ben123456"
 }
 
+```
 • A successful signup will result in a HTTP 201 Status Code and a response object 
-
+```
 •{
   "status": "success",
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZDYwMDk2M2NkODRlMDM3OWM0Yjg1MyIsIm5hbWUiOiJhbWEgYmVuZWRpY3QiLCJpYXQiOjE2MjQ2Mzc1OTUsImV4cCI6MTYyNTUwMTU5NX0.pp0F3lIQKcjJeWaq6JQ-xtcQQ3Sj5YFbMUhjGptdbRA",
@@ -60,7 +62,7 @@ It contains the following endpoints/routes
   }
 }
 
-
+```
 # login route
 
 • EndPoint "/users/login"
@@ -68,13 +70,16 @@ It contains the following endpoints/routes
 • Request type: POST
 
 • payload :  email, password
-e.g {
+e.g 
+```
+{
     "email" : "merian@gmail.com",
 	"password" : "ben123456"
 }
 
+```
 • A successful login will result in a HTTP 200 Status Code and a response object 
-
+```
 {
   "status": "success",
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZDQ4ZDUxNThjYWUzMDZhNTdiYTI1YiIsIm5hbWUiOiJhbWEgbWVyaWFuIiwiaWF0IjoxNjI0NjM3Njg4LCJleHAiOjE2MjU1MDE2ODh9.t5pthgntWHy_cE-7fGwN7QSuj5jNGudynLyIpnQ-LPg",
@@ -89,6 +94,8 @@ e.g {
   }
 }
 
+```
+
 # get all users route
 
 • EndPoint "/users"
@@ -96,7 +103,7 @@ e.g {
 • Request type: GET
 
 • A successful API request will return a HTTP 200 Status Code and a response object of 
-
+```
 {
   "status": "success",
   "requestedAt": "2021-06-25T16:16:29.715Z",
@@ -121,6 +128,7 @@ e.g {
   }
 }
 
+```
 # get a user route
 
 • EndPoint "/users/:id"
@@ -128,7 +136,7 @@ e.g {
 • Request type: GET
 
 • A successful API request will return a HTTP 200 Status Code and a response object of 
-
+```
 {
   "status": "success",
   "data": {
@@ -141,6 +149,8 @@ e.g {
     }
   }
 }
+
+```
 
 # update a user route
 
@@ -155,7 +165,7 @@ e.g {
 }
 
 • A successful update will result in a HTTP 200 Status Code and a response object 
-
+```
 {
   "status": "success",
   "data": {
@@ -169,6 +179,7 @@ e.g {
   }
 }
 
+```
 # delete a user route
 
 • EndPoint "/users/:id"
@@ -188,16 +199,19 @@ e.g {
     maximumAge: Number (required if videoType is children-movie),
     yearReleased: String (required if videoType is new-release)
 
-e.g {
+e.g 
+```
+{
     "videoTitle" : "The xtra ordinary",
     "videoGenre": "comedy",
     "videoType": "regular"
 }
 
+```
 • Request type: POST
 
 • A successful API request will return a HTTP 200 Status Code and a response object of 
-
+```
 {
   "status": "success",
   "data": {
@@ -213,6 +227,8 @@ e.g {
   }
 }
 
+```
+
 # get all videos route
 
 • EndPoint "/videos/videolist"
@@ -220,7 +236,7 @@ e.g {
 • Request type: GET
 
 • A successful API request will return a HTTP 200 Status Code and a response object of 
-
+```
 {
   "status": "success",
   "requestedAt": "2021-06-25T16:23:57.851Z",
@@ -266,6 +282,7 @@ e.g {
   }
 }
 
+```
 # get a video route
 
 • EndPoint "/videos/:id"
@@ -273,13 +290,15 @@ e.g {
 • Request type: GET
 
 • A successful API request will return a HTTP 200 Status Code and a response object of 
-
+```
 {
   "status": "success",
   "data": {
     "price": "This movie cost: 8 Birr/Day"
   }
 }
+
+```
 
 # update a video
 
@@ -288,14 +307,16 @@ e.g {
 • Request type: PATCH
 
 • payload: any member of the video needed to be updated
+```
 {
     "videoTitle" : "the extra ordinary",
     "videoGenre": "comedy",
     "videoType": "regular"
 }
 
+```
 • A successful API request will return a HTTP 200 Status Code and a response object of 
-
+```
 {
   "status": "success",
   "data": {
@@ -316,6 +337,8 @@ e.g {
   }
 }
 
+```
+
 # delete a video
 
 • EndPoint "/videos/:id"
@@ -328,15 +351,18 @@ e.g {
 
 • EndPoint "/videos/price"
 
-• payload: {
+• payload: 
+```
+{
     "title": "the extra ordinary",
     "numDays": 2
 }
 
+```
 • Request type: POST
 
 • A successful API request will return a HTTP 200 Status Code and no response object
-
+```
 {
   "status": "success",
   "data": {
@@ -352,4 +378,5 @@ e.g {
   }
 } 
 
+```
 [Link to the API documentation with sample requests](https://documenter.getpostman.com/view/9775449/Tzedh4XR)
