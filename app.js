@@ -80,10 +80,10 @@ const DB_STRING = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWOR
 
 mongoose
     .connect(DB_STRING, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false
+        useNewUrlParser: true,
+        useCreateIndex: true,
+        useUnifiedTopology: true,
+        useFindAndModify: false
     })
     .then(() => {
         app.listen(process.env.PORT || 5000, (req, res) => {
