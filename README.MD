@@ -1,33 +1,33 @@
 # Video Rental
 
 simple backend application that exposes signup, login, get all registered users, create a place, get a place by ID, get a place by user ID, update a place and delete a place API  using Express and MongoDB.
-This collection contains sample requests from this [API](http://localhost:5000/api/v1/)
+This collection contains sample requests from this [API](https://movies-rentals.herokuapp.com/api/v1/)
 
 It contains the following endpoints/routes
 
-• Signup a user (POST) [/users/signup](http://localhost:5000/api/v1/users/signup)
+• Signup a user (POST) [/users/signup](https://movies-rentals.herokuapp.com/api/v1/users/signup)
 
-• Login a user with given credentials (POST) [/users/login](http://localhost:5000/api/v1/users/login)
+• Login a user with given credentials (POST) [/users/login](https://movies-rentals.herokuapp.com/api/v1/users/login)
 
-• Get all registered user (GET) [/users](http://localhost:5000/api/v1/users/)
+• Get all registered user (GET) [/users](https://movies-rentals.herokuapp.com/api/v1/users/)
 
-• Get a user (GET) [/users/:id](http://localhost:5000/api/v1/users/:id)
+• Get a user (GET) [/users/:id](https://movies-rentals.herokuapp.com/api/v1/users/:id)
 
-• Update a user (PATCH) [/users/:id](http://localhost:5000/api/v1/users/:id)
+• Update a user (PATCH) [/users/:id](https://movies-rentals.herokuapp.com/api/v1/users/:id)
 
-• Delete a user (DELETE) [/users/:id](http://localhost:5000/api/v1/users/:id)
+• Delete a user (DELETE) [/users/:id](https://movies-rentals.herokuapp.com/api/v1/users/:id)
 
-• Create a video (POST) [/videos](http://localhost:5000/api/v1/videos)
+• Create a video (POST) [/videos](https://movies-rentals.herokuapp.com/api/v1/videos)
 
-• Get all videos (GET) [/videos/videolist](http://localhost:5000/api/v1/videos/videolist)
+• Get all videos (GET) [/videos/videolist](https://movies-rentals.herokuapp.com/api/v1/videos/videolist)
 
-• Get a video (GET) [/videos/:id](http://localhost:5000/api/v1/videos/:id)
+• Get a video (GET) [/videos/:id](https://movies-rentals.herokuapp.com/api/v1/videos/:id)
 
-• Update a video (UPDATE) [/videos/:id](http://localhost:5000/api/v1/videos/:id)
+• Update a video (UPDATE) [/videos/:id](https://movies-rentals.herokuapp.com/api/v1/videos/:id)
 
-• Delete a video (DELETE) [/videos/:id](http://localhost:5000/api/v1/videos/:id)
+• Delete a video (DELETE) [/videos/:id](https://movies-rentals.herokuapp.com/api/v1/videos/:id)
 
-• Create price (POST) [/videos/price](http://localhost:5000/api/v1/videos/price)
+• Create price (POST) [/videos/price](https://movies-rentals.herokuapp.com/api/v1/videos/price)
 
 # signup route
 
